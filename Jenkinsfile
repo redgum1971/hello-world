@@ -21,6 +21,11 @@ pipeline {
         }
       }
     }
+    stage('Test') {
+      steps {
+        echo 'Test Step'
+      }
+    }
   }
   environment {
     RAYSTART = '1'
