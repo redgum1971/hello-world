@@ -8,10 +8,15 @@ pipeline {
             echo 'Hi There'
           }
         }
-        stage('') {
+        stage('Step1') {
           steps {
             echo 'Test Message'
             fileExists 'RaysLocalFile.txt'
+          }
+        }
+        stage('Step2') {
+          steps {
+            bat(script: 'TestBat.cmd', encoding: 'ascii', returnStatus: true, returnStdout: true)
           }
         }
       }
