@@ -8,9 +8,10 @@ pipeline {
             echo 'Hi There'
           }
         }
-        stage('error') {
+        stage('') {
           steps {
-            sh 'set'
+            echo 'Test Message'
+            fileExists 'RaysLocalFile.txt'
           }
         }
       }
