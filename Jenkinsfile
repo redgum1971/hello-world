@@ -8,9 +8,9 @@ pipeline {
             echo 'Hi There'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            sh 'env'
+            sh 'set'
           }
         }
       }
