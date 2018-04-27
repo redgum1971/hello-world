@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('Compile') {
-      steps {
-        echo 'Hi There'
+      parallel {
+        stage('Compile') {
+          steps {
+            echo 'Hi There'
+          }
+        }
+        stage('') {
+          steps {
+            sh 'env'
+          }
+        }
       }
     }
   }
