@@ -2,8 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Compile') {
-      steps {
-        echo 'Hi There'
+      parallel {
+        stage('Compile') {
+          steps {
+            echo 'Hi There'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'Test Message'
+            fileExists 'RaysLocalFile.txt'
+          }
+        }
       }
     }
   }
