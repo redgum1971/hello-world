@@ -16,7 +16,8 @@ pipeline {
         }
         stage('Stage2_BatFile') {
           steps {
-            bat(script: 'TestBat.cmd', encoding: 'ascii', returnStatus: true, returnStdout: true)
+            // bat(script: 'TestBat.cmd', encoding: 'ascii', returnStatus: true, returnStdout: true)
+            echo 'In place of the windows bat file'
           }
         }
       }
